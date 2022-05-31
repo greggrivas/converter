@@ -105,7 +105,7 @@
           <item row="0" column="1">
            <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0,0">
             <item>
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="hour_line_in">
               <property name="minimumSize">
                <size>
                 <width>100</width>
@@ -118,13 +118,19 @@
               <property name="toolTip">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_2"/>
+             <widget class="QLineEdit" name="mins_line_in"/>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_3"/>
+             <widget class="QLineEdit" name="secs_line_in"/>
             </item>
             <item>
              <widget class="Line" name="line">
@@ -143,7 +149,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_4">
+             <widget class="QLineEdit" name="degs_line_out">
               <property name="frame">
                <bool>true</bool>
               </property>
@@ -157,7 +163,7 @@
           <item row="0" column="0">
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="hours_label_in">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -172,7 +178,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="mins_label_in">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -187,7 +193,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="secs_label_in">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -212,7 +218,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_4">
+             <widget class="QLabel" name="degs_label_out">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -227,6 +233,25 @@
              </widget>
             </item>
            </layout>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="calc_degs">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Calculate</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -259,10 +284,50 @@
           <set>Qt::AlignCenter</set>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLineEdit" name="degs_line_in"/>
+            </item>
+            <item>
+             <widget class="Line" name="line_4">
+              <property name="minimumSize">
+               <size>
+                <width>220</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="midLineWidth">
+               <number>5</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="hour_line_out">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="mins_line_out"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="secs_line_out">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
           <item row="0" column="0">
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="degs_label_in">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -294,7 +359,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_6">
+             <widget class="QLabel" name="hours_label_out">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -312,7 +377,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_7">
+             <widget class="QLabel" name="mins_label_out">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -327,7 +392,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_8">
+             <widget class="QLabel" name="secs_label_out">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -338,46 +403,6 @@
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="0" column="1">
-           <layout class="QVBoxLayout" name="verticalLayout_4">
-            <item>
-             <widget class="QLineEdit" name="lineEdit_5"/>
-            </item>
-            <item>
-             <widget class="Line" name="line_4">
-              <property name="minimumSize">
-               <size>
-                <width>220</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="midLineWidth">
-               <number>5</number>
-              </property>
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_6">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_7"/>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_8">
-              <property name="readOnly">
-               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -395,6 +420,13 @@
              </size>
             </property>
            </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="calc_hours">
+            <property name="text">
+             <string>Calculate</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
