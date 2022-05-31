@@ -29,6 +29,5 @@ class Converter:
         secs = int(round(60 * (temp2 - int(mins)),1))
         return hours, mins, secs
 
-# test = Converter()
-# print(test.hours_to_degs(3,3,3))
-
+test = Converter()
+print(test.degs_to_hours(30.5))

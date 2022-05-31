@@ -40,7 +40,7 @@ class UI_Converter(QtWidgets.QApplication):
         self.main_window.degs_line_out.setText(str(h))
 
     def clicked2(self):
-        h2 = Converter.degs_to_hours(int(self.main_window.degs_line_in.text()))
+        h2 = Converter.degs_to_hours(float(self.main_window.degs_line_in.text()))
         self.main_window.hour_line_out.setText(str(h2[0]))
         self.main_window.mins_line_out.setText(str(h2[1]))
         self.main_window.secs_line_out.setText(str(h2[2]))
