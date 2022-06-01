@@ -11,3 +11,5 @@ convert Hours, Minutes and Seconds to Degrees and vice versa
 ## Requirements
 * Python v3.0+
 * Qt5
+
+![alt text](https://github.com/greggrivas/converter/blob/master/ui.png)
