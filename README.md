@@ -17,4 +17,3 @@ convert Hours, Minutes and Seconds to Degrees and vice versa
 * Qt5
 
 ![alt text](https://github.com/greggrivas/converter/blob/master/ui.png)
->>>>>>> 650bfa5b5702a82a12dc1bab3fb8f16a3b30fb70
