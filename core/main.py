@@ -14,7 +14,7 @@ class UI_Converter(QtWidgets.QApplication):
         self.h = ''
         # Load resource file
         resource_object = QtCore.QResource()
-        resource_file = resource_object.registerResource(os.path.abspath("resources.rcc"))
+        resource_file = resource_object.registerResource(os.path.abspath("core/resources.rcc"))
         if resource_file.bit_length() == 0:
             self.logger.error("Resources file could not be loaded. Program is exiting.")
 
